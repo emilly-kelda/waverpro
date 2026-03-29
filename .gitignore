@@ -1,0 +1,55 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/updraft/
+
+# WaverPro specific
+wp-content/plugins/*
+!wp-content/plugins/waverpro-core/
+
+# Environment files
+.env
+.env.local
+.env.production
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# API Keys - NEVER COMMIT!
+**/api-keys.json
+**/credentials.json
+**/secrets.json
+zapier-config-private.json
+whatsapp-credentials.json
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+
+# Composer
+vendor/
+composer.lock
+
+# Temporary files
+*.tmp
+*.temp
