@@ -260,7 +260,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - GitHub: [@emilly-kelda](https://github.com/emilly-kelda)
 - LinkedIn: [www.linkedin.com/in/emillyc](https://linkedin.com/in/yourprofile)
----
+
 
 ## **Acknowledgments**
 
@@ -276,7 +276,6 @@ For setup assistance or questions:
 - Open an [issue](https://github.com/emilly-kelda/waverpro/issues)
 - WhatsApp: +55 (62) 98175-7687
 
----
 
 ## **What's Next?**
 
@@ -289,9 +288,11 @@ For setup assistance or questions:
 
 **Interested in the SaaS version?** Check the `nextjs-saas` branch (coming soon!)
 
+---
 
 **⭐ If this project helped you, please star the repository!**
 
+---
 
 ## **Project Stats**
 
