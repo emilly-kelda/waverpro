@@ -117,7 +117,6 @@ cp -r waverpro/src/plugins/waverpro-core /path/to/wordpress/wp-content/plugins/
 ### **Step 4: Configure Integrations**
 See [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for detailed setup guide.
 
--
 
 ## **Quick Start**
 
@@ -151,7 +150,6 @@ See [docs/API_SETUP.md](docs/API_SETUP.md) for:
 - WhatsApp API configuration
 - Zapier/Make.com workflows
 
--
 
 ## **Business Model**
 
@@ -178,7 +176,6 @@ TOTAL: R$ 5,800 first year
 SAVINGS: R$ 67,200+ (1,159% ROI)
 ```
 
---
 
 ## **Features Comparison**
 
@@ -193,7 +190,6 @@ SAVINGS: R$ 67,200+ (1,159% ROI)
 | **Multilingual** | ❌ | ⚠️ | ✅ |
 | **Pricing** | Free (high risk) | R$ 40-100/month | R$ 2,200 one-time |
 
---
 
 ## **Project Structure**
 ```
@@ -221,7 +217,6 @@ waverpro/
         └── waiver-template.php
 ```
 
---
 
 ## **Deployment**
 
@@ -238,7 +233,6 @@ Ready to deploy WaverPro to a client? Follow our comprehensive deployment guide:
 
 **Total time:** 4-5 hours per client
 
---
 
 ## **Contributing**
 
@@ -252,13 +246,11 @@ This is a portfolio project showcasing real-world WordPress plugin development.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
 
 ## **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
 ## **Author**
 
@@ -277,7 +269,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Designed with input from kitesurf and windsurf school owners
 - LGPD compliance guidance from Brazilian legal experts
 
----
 
 ## **Support**
 
@@ -298,11 +289,9 @@ For setup assistance or questions:
 
 **Interested in the SaaS version?** Check the `nextjs-saas` branch (coming soon!)
 
----
 
 **⭐ If this project helped you, please star the repository!**
 
----
 
 ## **Project Stats**
 
