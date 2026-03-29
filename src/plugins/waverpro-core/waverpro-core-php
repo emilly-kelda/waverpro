@@ -45,7 +45,8 @@ class WaverPro {
     private function load_dependencies() {
         require_once WAVERPRO_PLUGIN_DIR . 'includes/class-waiver-handler.php';
         require_once WAVERPRO_PLUGIN_DIR . 'includes/class-lgpd-compliance.php';
-    }
+        require_once WAVERPRO_PLUGIN_DIR . 'includes/class-gravity-forms-integration.php'; // NOVA LINHA
+}
 
     /**
      * Initialize WordPress hooks
