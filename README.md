@@ -19,7 +19,6 @@ Watersports schools in Brazil face critical challenges:
 
 **One lawsuit can cost R$ 50,000+. WaverPro eliminates this risk.**
 
----
 
 ## **Features**
 
@@ -50,7 +49,6 @@ Watersports schools in Brazil face critical challenges:
 -  **CSV exports** - For legal audits and reporting
 -  **Mobile responsive** - Manage from any device
 
----
 
 ## **Target Market**
 
@@ -63,7 +61,6 @@ Built specifically for Brazilian watersports schools offering:
 
 **Primary markets:** Ceará (Cumbuco, Jericoacoara), Piauí (Barra Grande), Maranhão (Atins)
 
----
 
 ## **Tech Stack**
 
@@ -83,7 +80,6 @@ Built specifically for Brazilian watersports schools offering:
 - **WhatsApp Business API** (360Dialog or Twilio)
 - **Google Drive API** (automated backups)
 
----
 
 ## **Installation**
 
@@ -121,7 +117,7 @@ cp -r waverpro/src/plugins/waverpro-core /path/to/wordpress/wp-content/plugins/
 ### **Step 4: Configure Integrations**
 See [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for detailed setup guide.
 
----
+-
 
 ## **Quick Start**
 
@@ -155,7 +151,7 @@ See [docs/API_SETUP.md](docs/API_SETUP.md) for:
 - WhatsApp API configuration
 - Zapier/Make.com workflows
 
----
+-
 
 ## **Business Model**
 
@@ -182,7 +178,7 @@ TOTAL: R$ 5,800 first year
 SAVINGS: R$ 67,200+ (1,159% ROI)
 ```
 
----
+--
 
 ## **Features Comparison**
 
@@ -197,7 +193,7 @@ SAVINGS: R$ 67,200+ (1,159% ROI)
 | **Multilingual** | ❌ | ⚠️ | ✅ |
 | **Pricing** | Free (high risk) | R$ 40-100/month | R$ 2,200 one-time |
 
----
+--
 
 ## **Project Structure**
 ```
@@ -225,7 +221,7 @@ waverpro/
         └── waiver-template.php
 ```
 
----
+--
 
 ## **Deployment**
 
@@ -242,7 +238,7 @@ Ready to deploy WaverPro to a client? Follow our comprehensive deployment guide:
 
 **Total time:** 4-5 hours per client
 
----
+--
 
 ## **Contributing**
 
