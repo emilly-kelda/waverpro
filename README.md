@@ -7,7 +7,6 @@
 
 Enterprise-grade digital waiver management system specifically built for Brazilian watersports schools. Features complete LGPD compliance, WhatsApp automation, multilingual support, and automated Google Drive backups.
 
----
 
 ## **The Problem**
 
