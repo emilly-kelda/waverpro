@@ -1,10 +1,13 @@
 <?php
 /**
  * Plugin Name: WaverPro Core
- * Description: Digital waiver management for watersports schools
+ * Plugin URI: https://github.com/emillycode/waverpro
+ * Description: Digital waiver management system for watersports schools
  * Version: 1.0.0
  * Author: Emilly
+ * Author URI: https://github.com/emillycode
  * License: MIT
+ * Text Domain: waverpro
  */
 
 // Exit if accessed directly
@@ -12,7 +15,120 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Plugin version
-define('WAVERPRO_VERSION', '1.0.0');
+// Define plugin constants
+define('git statusWAVERPRO_VERSION', '1.0.0');
+define('WAVERPRO_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('WAVERPRO_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-echo "WaverPro Core Plugin loaded successfully!";
+/**
+ * Main WaverPro Class
+ */
+class WaverPro {
+
+    private static $instance = null;
+
+    public static function get_instance() {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    private function __construct() {
+        $this->load_dependencies();
+        $this->init_hooks();
+    }
+
+    /**
+     * Load required files
+     */
+    private function load_dependencies() {
+        require_once WAVERPRO_PLUGIN_DIR . 'includes/class-waiver-handler.php';
+        require_once WAVERPRO_PLUGIN_DIR . 'includes/class-lgpd-compliance.php';
+    }
+
+    /**
+     * Initialize WordPress hooks
+     */
+    private function init_hooks() {
+        add_action('init', array($this, 'init'));
+        add_action('admin_menu', array($this, 'add_admin_menu'));
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
+
+        // Create database tables on activation
+        register_activation_hook(__FILE__, array($this, 'activate'));
+    }
+
+    /**
+     * Plugin activation
+     */
+    public function activate() {
+        WaverPro_LGPD_Compliance::create_audit_table();
+        flush_rewrite_rules();
+    }
+
+    /**
+     * Initialize plugin
+     */
+    public function init() {
+        load_plugin_textdomain('waverpro', false,
+            dirname(plugin_basename(__FILE__)) . '/languages');
+    }
+
+    /**
+     * Add admin menu pages
+     */
+    public function add_admin_menu() {
+        // Main dashboard
+        add_menu_page(
+            __('WaverPro Dashboard', 'waverpro'),
+            __('WaverPro', 'waverpro'),
+            'manage_options',
+            'waverpro-dashboard',
+            array($this, 'render_dashboard'),
+            'dashicons-clipboard',
+            30
+        );
+
+        // Settings page
+        add_submenu_page(
+            'waverpro-dashboard',
+            __('Configurações', 'waverpro'),
+            __('Configurações', 'waverpro'),
+            'manage_options',
+            'waverpro-settings',
+            array($this, 'render_settings')
+        );
+    }
+
+    /**
+     * Render dashboard page
+     */
+    public function render_dashboard() {
+        require_once WAVERPRO_PLUGIN_DIR . 'admin/dashboard.php';
+    }
+
+    /**
+     * Render settings page
+     */
+    public function render_settings() {
+        require_once WAVERPRO_PLUGIN_DIR . 'admin/settings.php';
+    }
+
+    /**
+     * Enqueue admin scripts and styles
+     */
+    public function enqueue_admin_scripts($hook) {
+        if (strpos($hook, 'waverpro') === false) {
+            return;
+        }
+
+        wp_enqueue_style('dashicons');
+    }
+}
+
+// Initialize plugin
+function waverpro_init() {
+    return WaverPro::get_instance();
+}
+add_action('plugins_loaded', 'waverpro_init');
